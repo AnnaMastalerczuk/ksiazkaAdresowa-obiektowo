@@ -15,7 +15,7 @@ using namespace std;
 class PlikzUzytkownikami{
 
     Uzytkownik uzytkownik;
-    string nazwaPlikuZUzytkownikami;
+    const string nazwaPlikuZUzytkownikami;
 
     string zamienDaneUzytkownikaNaLinieZDanymiOddzielonaPionowymiKreskami(Uzytkownik uzytkownik);
     bool czyPlikJestPusty(fstream &plikTekstowy);
@@ -23,11 +23,10 @@ class PlikzUzytkownikami{
 
 public:
 
-    PlikzUzytkownikami(){
-    nazwaPlikuZUzytkownikami = "Uzytkownicy.txt";
-    };
+    PlikzUzytkownikami(string nazwaPlikUzytkownicy) : nazwaPlikuZUzytkownikami(nazwaPlikUzytkownicy){};
     void dopiszUzytkownikaDoPliku(Uzytkownik uzytkownik);
     vector <Uzytkownik> wczytajUzytkownikowZPliku();
+    void zapiszWszystkichUzytkownikowDoPliku(vector <Uzytkownik> &uzytkownicy);
 };
 
 #endif

@@ -12,11 +12,15 @@ class KsiazkaAdresowa{
     UzytkownikMenager uzytkownikMenager;
 
 public:
-    KsiazkaAdresowa(){
+    KsiazkaAdresowa(string nazwaPlikUzytkownicy) : uzytkownikMenager(nazwaPlikUzytkownicy){
     uzytkownikMenager.wczytajUzytkownikowZPliku();
     };
     void wyswietlUzytkownikow();
     void rejestracjaUzytkownika();
+    void logowanieUzytkownika();
+    void pobierzIdZalogowanegoUzytkownika();
+    void wylogowanieUzytkownika();
+    void zmianaHaslaZalogowanegoUzytkownika();
 
 
 };
