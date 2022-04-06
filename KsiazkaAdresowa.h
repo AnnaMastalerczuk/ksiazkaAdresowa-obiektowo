@@ -17,6 +17,10 @@ public:
     };
     void wyswietlUzytkownikow();
     void rejestracjaUzytkownika();
+    void logowanieUzytkownika();
+    void pobierzIdZalogowanegoUzytkownika();
+    void wylogowanieUzytkownika();
+    void zmianaHaslaZalogowanegoUzytkownika();
 
 
 };
