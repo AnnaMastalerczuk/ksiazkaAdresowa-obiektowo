@@ -22,7 +22,6 @@ class PlikzUzytkownikami{
     Uzytkownik pobierzDaneUzytkownika(string daneJednegoUzytkownikaOddzielonePionowymiKreskami);
 
 public:
-
     PlikzUzytkownikami(string nazwaPlikUzytkownicy) : nazwaPlikuZUzytkownikami(nazwaPlikUzytkownicy){};
     void dopiszUzytkownikaDoPliku(Uzytkownik uzytkownik);
     vector <Uzytkownik> wczytajUzytkownikowZPliku();

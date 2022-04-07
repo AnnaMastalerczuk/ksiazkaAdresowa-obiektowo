@@ -83,11 +83,9 @@ int UzytkownikMenager::logowanieUzytkownika()
 
                 if (itr -> pobierzHaslo() == haslo)
                 {
-                    //cout << idZalogowanegoUzytkownika << endl;
                     cout << endl << "Zalogowales sie." << endl << endl;
                     system("pause");
                     idZalogowanegoUzytkownika = itr -> pobierzId();
-                    //cout << idZalogowanegoUzytkownika << endl;
                     return idZalogowanegoUzytkownika;
                 }
             }
@@ -100,11 +98,6 @@ int UzytkownikMenager::logowanieUzytkownika()
     cout << "Nie ma uzytkownika z takim loginem" << endl << endl;
     system("pause");
     return 0;
-}
-
-int UzytkownikMenager::pobierzIdZalogowanegoUzytkownika(){
-    cout << idZalogowanegoUzytkownika << endl;
-return idZalogowanegoUzytkownika;
 }
 
 void UzytkownikMenager::wylogowanieUzytkownika(){

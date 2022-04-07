@@ -14,9 +14,12 @@ int main()
     //ksiazkaAdresowa.wyswietlUzytkownikow();
 
     ksiazkaAdresowa.logowanieUzytkownika();
-    ksiazkaAdresowa.pobierzIdZalogowanegoUzytkownika();
-    ksiazkaAdresowa.zmianaHaslaZalogowanegoUzytkownika();
-    ksiazkaAdresowa.wyswietlUzytkownikow();
-    ksiazkaAdresowa.wylogowanieUzytkownika();
+    ksiazkaAdresowa.dodajAdresata();
+    ksiazkaAdresowa.wyswietlAdresatowZalogowanegoUzytkownika();
+    //ksiazkaAdresowa.pobierzIdZalogowanegoUzytkownika();
+    //ksiazkaAdresowa.dodajAdresata();
+    //ksiazkaAdresowa.zmianaHaslaZalogowanegoUzytkownika();
+    //ksiazkaAdresowa.wyswietlUzytkownikow();
+    //ksiazkaAdresowa.wylogowanieUzytkownika();
     return 0;
 }
