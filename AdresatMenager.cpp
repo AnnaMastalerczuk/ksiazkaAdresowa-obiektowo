@@ -2,8 +2,6 @@
 
 int AdresatMenager::dodajAdresata(int idZalogowanegoUzytkownika)
 {
-//idZalogowanegoUzytkownika = id;
-
     Adresat adresat;
 
     system("cls");
@@ -16,9 +14,6 @@ int AdresatMenager::dodajAdresata(int idZalogowanegoUzytkownika)
     return ++idOstatniegoAdresata;
 }
 
-/*void AdresatMenager::ustawIdUzytkownika(int id){
-idZalogowanegoUzytkownika = id;
-}*/
 
 Adresat AdresatMenager::podajDaneNowegoAdresata(int idZalogowanegoUzytkownika)
 {

@@ -26,16 +26,18 @@ class AdresatMenager{
 public:
 
 
-    AdresatMenager(){
+    /*AdresatMenager(){
     idZalogowanegoUzytkownika = 1 ;
 
-    //idZalogowanegoUzytkownika = ksiazka.pobierzIdZalogowanegoUzytkownika();
     idOstatniegoAdresata = plikzAdresatami.wczytajAdresatowZalogowanegoUzytkownikaZPliku(adresaci, idZalogowanegoUzytkownika);
-    };
+    };*/
     int dodajAdresata(int id);
 
-    //void ustawIdUzytkownika(int id);
     void wyswietlAdresatowZalogowanegoUzytkownika();
+
+    void wczytajAdresatowZalogowanegoUzytkownikaZPliku(int idZalogowanegoUzytkownika){
+    idOstatniegoAdresata = plikzAdresatami.wczytajAdresatowZalogowanegoUzytkownikaZPliku(adresaci, idZalogowanegoUzytkownika);
+    }
 
 
 

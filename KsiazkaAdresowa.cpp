@@ -10,9 +10,7 @@ void KsiazkaAdresowa::rejestracjaUzytkownika(){
 
 void KsiazkaAdresowa::logowanieUzytkownika(){
     idZalogowanegoUzytkownika = uzytkownikMenager.logowanieUzytkownika();
-    //adresatMenager.AdresatMenager(idZalogowanegoUzytkownika);
-    //adresatMenager.ustawIdUzytkownika(idZalogowanegoUzytkownika);
-
+    adresatMenager.wczytajAdresatowZalogowanegoUzytkownikaZPliku(idZalogowanegoUzytkownika);
 }
 
 void KsiazkaAdresowa::wylogowanieUzytkownika(){
