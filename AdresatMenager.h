@@ -25,21 +25,11 @@ class AdresatMenager{
 
 public:
 
-
-    /*AdresatMenager(){
-    idZalogowanegoUzytkownika = 1 ;
-
-    idOstatniegoAdresata = plikzAdresatami.wczytajAdresatowZalogowanegoUzytkownikaZPliku(adresaci, idZalogowanegoUzytkownika);
-    };*/
     int dodajAdresata(int id);
-
     void wyswietlAdresatowZalogowanegoUzytkownika();
+    void wczytajAdresatowZalogowanegoUzytkownikaZPliku(int idZalogowanegoUzytkownika);
 
-    void wczytajAdresatowZalogowanegoUzytkownikaZPliku(int idZalogowanegoUzytkownika){
-    idOstatniegoAdresata = plikzAdresatami.wczytajAdresatowZalogowanegoUzytkownikaZPliku(adresaci, idZalogowanegoUzytkownika);
-    }
-
-
+    void czyszczenieWektoraAdresaci();
 
 };
 #endif

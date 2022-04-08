@@ -102,7 +102,6 @@ int UzytkownikMenager::logowanieUzytkownika()
 
 void UzytkownikMenager::wylogowanieUzytkownika(){
 idZalogowanegoUzytkownika = 0;
-cout << idZalogowanegoUzytkownika << endl;
 }
 
 void UzytkownikMenager::zmianaHaslaZalogowanegoUzytkownika()

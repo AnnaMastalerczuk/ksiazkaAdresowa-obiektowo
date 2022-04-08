@@ -15,6 +15,7 @@ void KsiazkaAdresowa::logowanieUzytkownika(){
 
 void KsiazkaAdresowa::wylogowanieUzytkownika(){
     uzytkownikMenager.wylogowanieUzytkownika();
+    adresatMenager.czyszczenieWektoraAdresaci();
 }
 
 void KsiazkaAdresowa::zmianaHaslaZalogowanegoUzytkownika(){

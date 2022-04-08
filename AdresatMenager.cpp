@@ -11,7 +11,7 @@ int AdresatMenager::dodajAdresata(int idZalogowanegoUzytkownika)
     adresaci.push_back(adresat);
     plikzAdresatami.dopiszAdresataDoPliku(adresat);
 
-    return ++idOstatniegoAdresata;
+    return idOstatniegoAdresata;
 }
 
 
@@ -56,6 +56,16 @@ void AdresatMenager::wyswietlAdresatowZalogowanegoUzytkownika(){
         cout << adresaci[i].pobierzNumerTelefonu() << endl;
         cout << adresaci[i].pobierzAdres() << endl;
     }
+    system("pause");
 
 }
+
+void AdresatMenager::wczytajAdresatowZalogowanegoUzytkownikaZPliku(int idZalogowanegoUzytkownika){
+    idOstatniegoAdresata = plikzAdresatami.wczytajAdresatowZalogowanegoUzytkownikaZPliku(adresaci, idZalogowanegoUzytkownika);
+};
+
+void AdresatMenager::czyszczenieWektoraAdresaci(){
+adresaci.clear();
+}
+
 
