@@ -13,7 +13,7 @@ using namespace std;
 
 class PlikzAdresatami{
 
-    string nazwaPlikuZAdresatami;
+    string NAZWA_PLIKU_Z_ADRESATAMI;
 
     int pobierzIdUzytkownikaZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami);
     int pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami);
@@ -22,8 +22,7 @@ class PlikzAdresatami{
     bool czyPlikJestPusty(fstream &plikTekstowy);
 
 public:
-    PlikzAdresatami(){
-    nazwaPlikuZAdresatami = "KsiazkaAdresowa.txt";
+    PlikzAdresatami(string nazwaPlikuZAdresatami) : NAZWA_PLIKU_Z_ADRESATAMI(nazwaPlikuZAdresatami){
     };
 
     int wczytajAdresatowZalogowanegoUzytkownikaZPliku(vector <Adresat> &adresaci, int idZalogowanegoUzytkownika);

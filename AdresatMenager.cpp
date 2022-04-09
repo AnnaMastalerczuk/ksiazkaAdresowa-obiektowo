@@ -1,12 +1,12 @@
 #include "AdresatMenager.h"
 
-int AdresatMenager::dodajAdresata(int idZalogowanegoUzytkownika)
+int AdresatMenager::dodajAdresata()
 {
     Adresat adresat;
 
     system("cls");
     cout << " >>> DODAWANIE NOWEGO ADRESATA <<<" << endl << endl;
-    adresat = podajDaneNowegoAdresata(idZalogowanegoUzytkownika);
+    adresat = podajDaneNowegoAdresata();
 
     adresaci.push_back(adresat);
     plikzAdresatami.dopiszAdresataDoPliku(adresat);
@@ -15,13 +15,13 @@ int AdresatMenager::dodajAdresata(int idZalogowanegoUzytkownika)
 }
 
 
-Adresat AdresatMenager::podajDaneNowegoAdresata(int idZalogowanegoUzytkownika)
+Adresat AdresatMenager::podajDaneNowegoAdresata()
 {
     Adresat adresat;
     string imie, nazwisko, nrTelefonu, email, adres;
 
     adresat.ustawId(++idOstatniegoAdresata);
-    adresat.ustawIdUzytkownika(idZalogowanegoUzytkownika);
+    adresat.ustawIdUzytkownika(ID_ZALOGOWANEGO_UZYTKOWNIKA);
 
     cout << "Podaj imie: ";
     cin >> imie;
@@ -59,10 +59,6 @@ void AdresatMenager::wyswietlAdresatowZalogowanegoUzytkownika(){
     system("pause");
 
 }
-
-void AdresatMenager::wczytajAdresatowZalogowanegoUzytkownikaZPliku(int idZalogowanegoUzytkownika){
-    idOstatniegoAdresata = plikzAdresatami.wczytajAdresatowZalogowanegoUzytkownikaZPliku(adresaci, idZalogowanegoUzytkownika);
-};
 
 void AdresatMenager::czyszczenieWektoraAdresaci(){
 adresaci.clear();

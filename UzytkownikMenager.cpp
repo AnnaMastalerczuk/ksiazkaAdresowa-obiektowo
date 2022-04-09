@@ -58,11 +58,6 @@ void UzytkownikMenager::wyswietlUzytkownikow() {
     }
 }
 
-void UzytkownikMenager::wczytajUzytkownikowZPliku(){
-    uzytkownicy = plikzUzytkownikami.wczytajUzytkownikowZPliku();
-}
-
-
 int UzytkownikMenager::logowanieUzytkownika()
 {
     Uzytkownik uzytkownik;
@@ -120,6 +115,10 @@ void UzytkownikMenager::zmianaHaslaZalogowanegoUzytkownika()
         }
     }
     plikzUzytkownikami.zapiszWszystkichUzytkownikowDoPliku(uzytkownicy);
+}
+
+int UzytkownikMenager::pobierzIdZalogowanegoUzytkownika(){
+    return idZalogowanegoUzytkownika;
 }
 
 

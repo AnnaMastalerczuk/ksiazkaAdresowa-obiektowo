@@ -22,14 +22,15 @@ class UzytkownikMenager{
 
 public:
     UzytkownikMenager(string nazwaPlikUzytkownicy) : plikzUzytkownikami(nazwaPlikUzytkownicy) {
+    uzytkownicy = plikzUzytkownikami.wczytajUzytkownikowZPliku();
     idZalogowanegoUzytkownika = 0;
     };
     void wyswietlUzytkownikow();
     void rejestracjaUzytkownika();
-    void wczytajUzytkownikowZPliku();
     int logowanieUzytkownika();
     void wylogowanieUzytkownika();
     void zmianaHaslaZalogowanegoUzytkownika();
+    int pobierzIdZalogowanegoUzytkownika();
 
 };
 
