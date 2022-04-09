@@ -10,12 +10,14 @@ void KsiazkaAdresowa::rejestracjaUzytkownika(){
 
 void KsiazkaAdresowa::logowanieUzytkownika(){
     uzytkownikMenager.logowanieUzytkownika();
+    if (uzytkownikMenager.czyUzytkownikZalogowany()){
     adresatMenager = new AdresatMenager(NAZWA_PLIKU_Z_ADRESATAMI, uzytkownikMenager.pobierzIdZalogowanegoUzytkownika());
+    }
 }
 
 void KsiazkaAdresowa::wylogowanieUzytkownika(){
     uzytkownikMenager.wylogowanieUzytkownika();
-    adresatMenager->czyszczenieWektoraAdresaci();
+    //adresatMenager->czyszczenieWektoraAdresaci();
 }
 
 void KsiazkaAdresowa::zmianaHaslaZalogowanegoUzytkownika(){

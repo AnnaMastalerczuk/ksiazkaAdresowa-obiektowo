@@ -16,7 +16,6 @@ class AdresatMenager{
     PlikzAdresatami plikzAdresatami;
 
     const int ID_ZALOGOWANEGO_UZYTKOWNIKA;
-    int idOstatniegoAdresata;
     int idUsunietegoAdresata;
     vector <Adresat> adresaci;
 
@@ -27,12 +26,12 @@ public:
 
     AdresatMenager(string nazwaPlikuzAdresatami, int idZalogowanegoUzytkownika)
     : plikzAdresatami(nazwaPlikuzAdresatami),ID_ZALOGOWANEGO_UZYTKOWNIKA(idZalogowanegoUzytkownika){
-        idOstatniegoAdresata = plikzAdresatami.wczytajAdresatowZalogowanegoUzytkownikaZPliku(adresaci,ID_ZALOGOWANEGO_UZYTKOWNIKA);
+        plikzAdresatami.wczytajAdresatowZalogowanegoUzytkownikaZPliku(adresaci,ID_ZALOGOWANEGO_UZYTKOWNIKA);
     };
 
-    int dodajAdresata();
+    void dodajAdresata();
     void wyswietlAdresatowZalogowanegoUzytkownika();
-    void czyszczenieWektoraAdresaci();
+    //void czyszczenieWektoraAdresaci();
 
 };
 #endif

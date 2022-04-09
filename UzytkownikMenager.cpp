@@ -121,5 +121,12 @@ int UzytkownikMenager::pobierzIdZalogowanegoUzytkownika(){
     return idZalogowanegoUzytkownika;
 }
 
+bool UzytkownikMenager::czyUzytkownikZalogowany(){
+    if (idZalogowanegoUzytkownika > 0){
+        return true;
+    }
+
+    return false;
+}
 
 
