@@ -6,6 +6,7 @@
 
 #include "Uzytkownik.h"
 #include "PlikzUzytkownikami.h"
+#include "MetodyPomocnicze.h"
 
 using namespace std;
 

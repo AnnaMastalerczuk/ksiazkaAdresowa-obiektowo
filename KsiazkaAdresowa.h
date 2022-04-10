@@ -5,10 +5,11 @@
 
 #include "UzytkownikMenager.h"
 #include "AdresatMenager.h"
+#include "MetodyPomocnicze.h"
 
 using namespace std;
 
-class KsiazkaAdresowa{
+class KsiazkaAdresowa {
 
     UzytkownikMenager uzytkownikMenager;
     AdresatMenager *adresatMenager;
@@ -17,10 +18,10 @@ class KsiazkaAdresowa{
 
 public:
     KsiazkaAdresowa(string nazwaPlikUzytkownicy, string nazwaPlikuAdresaci)
-    : uzytkownikMenager(nazwaPlikUzytkownicy), NAZWA_PLIKU_Z_ADRESATAMI(nazwaPlikuAdresaci){
+        : uzytkownikMenager(nazwaPlikUzytkownicy), NAZWA_PLIKU_Z_ADRESATAMI(nazwaPlikuAdresaci) {
         adresatMenager = NULL;
     };
-    ~KsiazkaAdresowa(){
+    ~KsiazkaAdresowa() {
         delete adresatMenager;
         adresatMenager = NULL;
     }
@@ -31,6 +32,10 @@ public:
     void zmianaHaslaZalogowanegoUzytkownika();
     void dodajAdresata();
     void wyswietlAdresatowZalogowanegoUzytkownika();
+    bool czyUzytkownikZalogowany();
+    char wybierzOpcjeZMenuGlownego();
+    char wybierzOpcjeZMenuUzytkownika();
+
 
 };
 

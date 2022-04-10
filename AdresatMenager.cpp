@@ -1,7 +1,6 @@
 #include "AdresatMenager.h"
 
-void AdresatMenager::dodajAdresata()
-{
+void AdresatMenager::dodajAdresata() {
     Adresat adresat;
 
     system("cls");
@@ -9,17 +8,17 @@ void AdresatMenager::dodajAdresata()
     adresat = podajDaneNowegoAdresata();
 
     adresaci.push_back(adresat);
-    if (plikzAdresatami.dopiszAdresataDoPliku(adresat)){
+    if (plikzAdresatami.dopiszAdresataDoPliku(adresat)) {
         cout << "Adresat zostal dopisany" << endl;
-    } else cout << "Nie udalo sie dopisac adresata" << endl;
+    } else {
+        cout << "Nie udalo sie dopisac adresata" << endl;
+    }
 
+    system("pause");
 
-    //return idOstatniegoAdresata;
 }
 
-
-Adresat AdresatMenager::podajDaneNowegoAdresata()
-{
+Adresat AdresatMenager::podajDaneNowegoAdresata() {
     Adresat adresat;
     string imie, nazwisko, nrTelefonu, email, adres;
 
@@ -27,30 +26,27 @@ Adresat AdresatMenager::podajDaneNowegoAdresata()
     adresat.ustawIdUzytkownika(ID_ZALOGOWANEGO_UZYTKOWNIKA);
 
     cout << "Podaj imie: ";
-    cin >> imie;
-    adresat.ustawImie(MetodyPomocnicze::zamienPierwszaLitereNaDuzaAPozostaleNaMale(imie));
+    adresat.ustawImie(MetodyPomocnicze::wczytajLinie());
+    adresat.ustawImie(MetodyPomocnicze::zamienPierwszaLitereNaDuzaAPozostaleNaMale(adresat.pobierzImie()));
 
     cout << "Podaj nazwisko: ";
-    cin >> nazwisko;
-    adresat.ustawNazwisko(MetodyPomocnicze::zamienPierwszaLitereNaDuzaAPozostaleNaMale(nazwisko));
+    adresat.ustawNazwisko(MetodyPomocnicze::wczytajLinie());
+    adresat.ustawNazwisko(MetodyPomocnicze::zamienPierwszaLitereNaDuzaAPozostaleNaMale(adresat.pobierzNazwisko()));
 
     cout << "Podaj numer telefonu: ";
-    cin >> nrTelefonu;
-    adresat.ustawNumerTelefonu(nrTelefonu);
+    adresat.ustawNumerTelefonu(MetodyPomocnicze::wczytajLinie());
 
     cout << "Podaj email: ";
-    cin >> email;
-    adresat.ustawEmail(email);
+    adresat.ustawEmail(MetodyPomocnicze::wczytajLinie());
 
     cout << "Podaj adres: ";
-    cin >> adres;
-    adresat.ustawAdres(adres);
+    adresat.ustawAdres(MetodyPomocnicze::wczytajLinie());
 
     return adresat;
 }
 
-void AdresatMenager::wyswietlAdresatowZalogowanegoUzytkownika(){
-    for (int i = 0; i < adresaci.size(); i++){
+void AdresatMenager::wyswietlAdresatowZalogowanegoUzytkownika() {
+    for (int i = 0; i < adresaci.size(); i++) {
         cout << adresaci[i].pobierzId() << endl;
         cout << adresaci[i].pobierzIdUzytkownika() << endl;
         cout << adresaci[i].pobierzImie() << endl;
