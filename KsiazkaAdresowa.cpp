@@ -73,3 +73,15 @@ char KsiazkaAdresowa::wybierzOpcjeZMenuUzytkownika() {
 
     return wybor;
 }
+
+void KsiazkaAdresowa::wyszukajAdresatowPoImieniu(){
+    adresatMenager -> wyszukajAdresatowPoImieniu();
+}
+
+void KsiazkaAdresowa::wyszukajAdresatowPoNazwisku(){
+    adresatMenager -> wyszukajAdresatowPoNazwisku();
+}
+
+void KsiazkaAdresowa::usunAdresata(){
+    adresatMenager -> usunAdresata();
+}

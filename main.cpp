@@ -5,19 +5,15 @@
 
 using namespace std;
 
-int main()
-{
+int main() {
     KsiazkaAdresowa ksiazkaAdresowa("Uzytkownicy.txt", "ksiazkaAdresowa.txt");
     char wybor;
 
-    while (true)
-    {
-        if (!ksiazkaAdresowa.czyUzytkownikZalogowany())
-        {
+    while (true) {
+        if (!ksiazkaAdresowa.czyUzytkownikZalogowany()) {
             wybor = ksiazkaAdresowa.wybierzOpcjeZMenuGlownego();
 
-            switch (wybor)
-            {
+            switch (wybor) {
             case '1':
                 ksiazkaAdresowa.rejestracjaUzytkownika();
                 break;
@@ -32,27 +28,24 @@ int main()
                 system("pause");
                 break;
             }
-        }
-        else
-        {
+        } else {
             wybor = ksiazkaAdresowa.wybierzOpcjeZMenuUzytkownika();
 
-            switch (wybor)
-            {
+            switch (wybor) {
             case '1':
                 ksiazkaAdresowa.dodajAdresata();
                 break;
             case '2':
-
+                ksiazkaAdresowa.wyszukajAdresatowPoImieniu();
                 break;
             case '3':
-
+                ksiazkaAdresowa.wyszukajAdresatowPoNazwisku();
                 break;
             case '4':
                 ksiazkaAdresowa.wyswietlAdresatowZalogowanegoUzytkownika();
                 break;
             case '5':
-
+                ksiazkaAdresowa.usunAdresata();
                 break;
             case '6':
 
@@ -67,14 +60,21 @@ int main()
         }
     }
 
+    return 0;
+}
+
+int dodajadresata_main() {
+    AdresatMenager adresatMenager("ksiazkaAdresowa.txt",1);
+    adresatMenager.dodajAdresata();
+    adresatMenager.dodajAdresata();
 
     return 0;
 }
 
-int dodajadresata_main(){
+//#include "AdresatMenager.h"
+int usunadresata_main() {
 AdresatMenager adresatMenager("ksiazkaAdresowa.txt",1);
-adresatMenager.dodajAdresata();
-adresatMenager.dodajAdresata();
+adresatMenager.usunAdresata();
 
 return 0;
 }
