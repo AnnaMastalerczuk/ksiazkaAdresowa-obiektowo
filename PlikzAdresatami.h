@@ -5,28 +5,27 @@
 #include <vector>
 #include <fstream>
 
+#include "PlikTekstowy.h"
 #include "Adresat.h"
 #include "MetodyPomocnicze.h"
 
 
 using namespace std;
 
-class PlikzAdresatami{
+class PlikzAdresatami : public PlikTekstowy{
 
-    string NAZWA_PLIKU_Z_ADRESATAMI;
-    string NAZWA_PLIKU_TYMCZASOWEGO_Z_ADRESATAMI;
+    const string NAZWA_PLIKU_TYMCZASOWEGO_Z_ADRESATAMI;
     int idOstatniegoAdresata;
 
     int pobierzIdUzytkownikaZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami);
     int pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami);
     string zamienDaneAdresataNaLinieZDanymiOddzielonymiPionowymiKreskami(Adresat adresat);
     Adresat pobierzDaneAdresata(string daneAdresataOddzielonePionowymiKreskami);
-    bool czyPlikJestPusty(fstream &plikTekstowy);
     int pobierzZPlikuIdOstatniegoAdresata();
 
 
 public:
-    PlikzAdresatami(string nazwaPlikuZAdresatami) : NAZWA_PLIKU_Z_ADRESATAMI(nazwaPlikuZAdresatami), NAZWA_PLIKU_TYMCZASOWEGO_Z_ADRESATAMI("ksiazkaAdresowa_tymczasowy.txt"){
+    PlikzAdresatami(string nazwaPlikuZAdresatami) : PlikTekstowy(nazwaPlikuZAdresatami), NAZWA_PLIKU_TYMCZASOWEGO_Z_ADRESATAMI("ksiazkaAdresowa_tymczasowy.txt"){
     idOstatniegoAdresata = 0;
     };
 
