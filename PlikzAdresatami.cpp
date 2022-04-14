@@ -147,8 +147,6 @@ int PlikzAdresatami::pobierzIdOstatniegoAdresata(){
 return idOstatniegoAdresata;
 }
 
-//////////////////////////////////////////////////////////////////////////////////////////////
-
 void PlikzAdresatami::podajIdOstatniegoAdresataPoUsunieciuWybranegoAdresata(int idUsuwanegoAdresata)
 {
     if (idUsuwanegoAdresata == idOstatniegoAdresata)
@@ -179,7 +177,7 @@ int PlikzAdresatami::pobierzZPlikuIdOstatniegoAdresata()
     }
     return idOstatniegoAdresata;
 }
-//////////////////////////////////////////////////////////////////////////////
+
 void PlikzAdresatami::zaktualizujDaneWybranegoAdresata(Adresat adresat)
 {
     int numerLiniiEdytowanegoAdresata = 0;
@@ -222,8 +220,6 @@ void PlikzAdresatami::zaktualizujDaneWybranegoAdresata(Adresat adresat)
     }
 
 }
-
-///////////////////////////////////////////////////////
 
 void PlikzAdresatami::usunWybranaLinieWPliku(int idUsuwanegoAdresata)
 {
