@@ -16,13 +16,14 @@ class AdresatMenager{
     PlikzAdresatami plikzAdresatami;
 
     const int ID_ZALOGOWANEGO_UZYTKOWNIKA;
-    int idUsunietegoAdresata;
+    //int idUsunietegoAdresata;
     vector <Adresat> adresaci;
 
     Adresat podajDaneNowegoAdresata();
     void wyswietlDaneAdresata(Adresat adresat);
     void wyswietlIloscWyszukanychAdresatow(int iloscAdresatow);
     int podajIdWybranegoAdresata();
+    char wybierzOpcjeZMenuEdycja();
 
 
 public:
@@ -38,6 +39,7 @@ public:
     void wyszukajAdresatowPoImieniu();
     void wyszukajAdresatowPoNazwisku();
     void usunAdresata();
+    void edytujAdresata();
 
 };
 #endif

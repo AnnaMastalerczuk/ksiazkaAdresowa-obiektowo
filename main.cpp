@@ -48,7 +48,7 @@ int main() {
                 ksiazkaAdresowa.usunAdresata();
                 break;
             case '6':
-
+                ksiazkaAdresowa.edytujAdresata();
                 break;
             case '7':
                 ksiazkaAdresowa.zmianaHaslaZalogowanegoUzytkownika();
@@ -71,10 +71,40 @@ int dodajadresata_main() {
     return 0;
 }
 
-//#include "AdresatMenager.h"
+#include "AdresatMenager.h"
 int usunadresata_main() {
 AdresatMenager adresatMenager("ksiazkaAdresowa.txt",1);
 adresatMenager.usunAdresata();
+adresatMenager.wyswietlAdresatowZalogowanegoUzytkownika();
 
 return 0;
 }
+
+#include "AdresatMenager.h"
+int edytujadresata_main() {
+AdresatMenager adresatMenager("ksiazkaAdresowa.txt",1);
+adresatMenager.edytujAdresata();
+adresatMenager.wyswietlAdresatowZalogowanegoUzytkownika();
+
+return 0;
+}
+
+#include "AdresatMenager.h"
+int dodawanie_main() {
+AdresatMenager adresatMenager("ksiazkaAdresowa.txt",1);
+adresatMenager.dodajAdresata();
+adresatMenager.wyswietlAdresatowZalogowanegoUzytkownika();
+
+return 0;
+}
+
+#include "PlikzAdresatami.h"
+#include <vector>
+int _main(){
+PlikzAdresatami plik("ksiazkaAdresowa.txt");
+vector <Adresat> adresaci;
+plik.wczytajAdresatowZalogowanegoUzytkownikaZPliku(adresaci, 1);
+
+return 0;
+}
+

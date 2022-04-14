@@ -22,18 +22,20 @@ class PlikzAdresatami{
     string zamienDaneAdresataNaLinieZDanymiOddzielonymiPionowymiKreskami(Adresat adresat);
     Adresat pobierzDaneAdresata(string daneAdresataOddzielonePionowymiKreskami);
     bool czyPlikJestPusty(fstream &plikTekstowy);
-    void zapiszKontaktDoPlikuTymczasowego(Adresat adresat);
     int pobierzZPlikuIdOstatniegoAdresata();
+
 
 public:
     PlikzAdresatami(string nazwaPlikuZAdresatami) : NAZWA_PLIKU_Z_ADRESATAMI(nazwaPlikuZAdresatami), NAZWA_PLIKU_TYMCZASOWEGO_Z_ADRESATAMI("ksiazkaAdresowa_tymczasowy.txt"){
+    idOstatniegoAdresata = 0;
     };
 
     void wczytajAdresatowZalogowanegoUzytkownikaZPliku(vector <Adresat> &adresaci, int idZalogowanegoUzytkownika);
     bool dopiszAdresataDoPliku(Adresat adresat);
     int pobierzIdOstatniegoAdresata();
-    void aktualizacjaPlikuKontaktyUsuniecie(vector <Adresat> &adresaci, int idUsuwanegoAdresata);
     void podajIdOstatniegoAdresataPoUsunieciuWybranegoAdresata(int idUsuwanegoAdresata);
+    void zaktualizujDaneWybranegoAdresata(Adresat adresat);
+    void usunWybranaLinieWPliku(int idUsuwanegoAdresata);
 
 };
 #endif
